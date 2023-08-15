@@ -34,7 +34,8 @@ async function main() {
         {
             name: "user_name",
             type: "input",
-            message: "Enter to name to continue"
+            message: "Enter to name to continue",
+            default: "user"
         }
     ]);
     let welcome_msg = `Answer the following questions:`;
@@ -67,48 +68,3 @@ async function main() {
         (console.log(chalk.bgRedBright(`Quiz completed! Your score: ${score} out of ${questions.length}, you failed`)));
 }
 main();
-// import inquirer from 'inquirer';
-// interface Question {
-//   question: string;
-//   options: string[];
-//   correctAnswerIndex: number;
-// }
-// const quiz: Question[] = [
-//   {
-//     question: 'What is the capital of France?',
-//     options: ['Berlin', 'London', 'Paris', 'Madrid'],
-//     correctAnswerIndex: 2,
-//   },
-//   {
-//     question: 'Which planet is known as the Red Planet?',
-//     options: ['Venus', 'Mars', 'Jupiter', 'Saturn'],
-//     correctAnswerIndex: 1,
-//   },
-//   {
-//     question: 'What is the largest mammal?',
-//     options: ['Elephant', 'Blue Whale', 'Giraffe', 'Hippopotamus'],
-//     correctAnswerIndex: 1,
-//   },
-// ];
-// async function main() {
-//   console.log('Welcome to the Quiz App!\n');
-//   let score = 0;
-//   for (const question of quiz) {
-//     const { userAnswer } = await inquirer.prompt([
-//       {
-//         type: 'list',
-//         name: 'userAnswer',
-//         message: question.question,
-//         choices: question.options,
-//       },
-//     ]);
-//     if (question.correctAnswerIndex === question.options.indexOf(userAnswer)) {
-//       console.log('Correct!\n');
-//       score++;
-//     } else {
-//       console.log('Incorrect.\n');
-//     }
-//   }
-//   console.log(`Quiz completed! Your score: ${score} out of ${quiz.length}`);
-// }
-// main();

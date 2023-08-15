@@ -51,7 +51,8 @@ async function main() {
         {
             name: "user_name",
             type: "input",
-            message: "Enter to name to continue"
+            message: "Enter to name to continue",
+            default:"user"
         }
     ])
     let welcome_msg = `Answer the following questions:`
